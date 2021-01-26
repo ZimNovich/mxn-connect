@@ -2,7 +2,7 @@
     "name": "mxn-connect",
     "main": "mxn-connect.js",
     "description": "High performance middleware framework based on connect",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/ZimNovich/mxn-connect",
     "license": "MIT",
     "author": {
