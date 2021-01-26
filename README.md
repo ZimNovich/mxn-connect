@@ -17,62 +17,41 @@ $ npm install mxn-connect
 Use it like this in your rollup.config:
 
 ```js
-var connect = require('connect');
-var http = require('http');
+// HTTP / HTTPS servers
+const http  = require("http");
+const https = require("https");
 
-var app = connect();
+// MXN Connect Framework
+const connect = require("mxn-connect");
 
-// gzip/deflate outgoing responses
-var compression = require('compression');
-app.use(compression());
+// Instantiating the App
+const app = connect();
 
-// store session state in browser cookie
-var cookieSession = require('cookie-session');
-app.use(cookieSession({
-    keys: ['secret1', 'secret2']
-}));
+// Adding Middleware
+const logging = require("mxn-logger");
+const favicon = require("mxn-favicons");
+const sstatic = require("serve-static");
 
-// parse urlencoded request bodies into req.body
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(logging);
+app.use(favicon(__dirname + "/public/icons"));
+app.use(sstatic(__dirname + "/public"));
 
-// respond to all requests
-app.use(function(req, res){
-  res.end('Hello from Connect!\n');
+// Respond to all requests
+app.use(function(req, res) {
+    res.end("Hello from MXN Connect!\n");
 });
 
-//create node.js http server and listen on port
-http.createServer(app).listen(3000);
-```
+// Create node.js http server and listen on port
+const options = { };
+const server = http.createServer(options, app)
+                   .listen(3000, function()
+{
+    console.log("Server is running on port 3000");
+});
 
-
-```js
-import rollupMxnJsx from "rollup-plugin-mxn-jsx";
-
-export default {
-	input: "src/index.js",
-	external: [
-		"preact",
-		"prop-types"
-	],
-	output: {
-		file: "bundle/bundle.js",
-		format: "iife",
-		name: "App",
-		sourcemap: false,
-		globals: {
-			"preact": "preact",
-			"prop-types": "PropTypes"
-		}
-	},
-	plugins: [
-		rollupMxnJsx({
-			factory: "h",
-			include: ["*.js", "*.jsx"]
-		})
-	]
-};
-
+server.on("error" , function(error) {
+    console.error("Error event handler called: " + error);
+});
 ```
 
 ## License
