@@ -1,6 +1,6 @@
 # mxn-connect
 
-**mxn-connect** is a fork of [[**connect**]](https://github.com/senchalabs/connect), an extensible HTTP server framework for [Node.js](http://nodejs.org) using "plugins" known as **middleware**.
+**mxn-connect** is a fork of [**connect**](https://github.com/senchalabs/connect), an extensible HTTP server framework for [Node.js](http://nodejs.org) using "plugins" known as **middleware**.
 
 - ~6.1kb size
 - ~2.5kb minified + gzipped
