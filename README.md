@@ -77,6 +77,25 @@ These middleware and libraries are officially supported by the Connect/Express t
 
 Most of these are exact ports of their Connect 2.x equivalents. The primary exception is `cookie-session`.
 
+## Legacy Middleware
+
+Some middleware previously included with Connect are no longer supported by the Connect/Express team, are replaced by an alternative module, or should be superseded by a better module. Use one of these alternatives instead:
+
+  - `cookieParser`
+    - [cookies](https://www.npmjs.com/package/cookies) and [keygrip](https://www.npmjs.com/package/keygrip)
+  - `limit`
+    - [raw-body](https://www.npmjs.com/package/raw-body)
+  - `multipart`
+    - [connect-multiparty](https://www.npmjs.com/package/connect-multiparty)
+    - [connect-busboy](https://www.npmjs.com/package/connect-busboy)
+  - `query`
+    - [qs](https://www.npmjs.com/package/qs)
+  - `staticCache`
+    - [st](https://www.npmjs.com/package/st)
+    - [connect-static](https://www.npmjs.com/package/connect-static)
+
+Checkout [http-framework](https://github.com/Raynos/http-framework/wiki/Modules) for many other compatible middleware!
+
 ## License
 
 This module is released under the MIT license.
