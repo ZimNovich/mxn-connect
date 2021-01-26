@@ -12,24 +12,22 @@ $ npm install mxn-connect
 
 ## Usage
 
-Use it like this in your rollup.config:
+Use it like this:
 
 ```js
-// HTTP / HTTPS servers
+// HTTP server
 const http  = require("http");
-const https = require("https");
 
-// MXN Connect Framework
+// MXN Connect Framework and Middlewares
 const connect = require("mxn-connect");
+const logging = require("mxn-logger");
+const favicon = require("mxn-favicons");
+const sstatic = require("serve-static");
 
 // Instantiating the App
 const app = connect();
 
 // Adding Middleware
-const logging = require("mxn-logger");
-const favicon = require("mxn-favicons");
-const sstatic = require("serve-static");
-
 app.use(logging);
 app.use(favicon(__dirname + "/public/icons"));
 app.use(sstatic(__dirname + "/public"));
@@ -41,10 +39,8 @@ app.use(function(req, res) {
 
 // Create node.js http server and listen on port
 const options = { };
-const server = http.createServer(options, app)
-                   .listen(3000, function()
-{
-    console.log("Server is running on port 3000");
+const server = http.createServer(options, app).listen(3000, function() {
+    console.log("Server is running on port " + 3000);
 });
 
 server.on("error" , function(error) {
