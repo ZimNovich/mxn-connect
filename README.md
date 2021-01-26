@@ -1,11 +1,10 @@
 # mxn-connect
 
-**mxn-connect** is a fork of [**connect**](https://github.com/senchalabs/connect), an extensible HTTP server framework for [Node.js](http://nodejs.org) using "plugins" known as **middleware**.
+**mxn-connect** is a fork of [**connect**](https://github.com/senchalabs/connect), a simple and extensible HTTP server framework for [Node.js](http://nodejs.org) using "plugins" known as **middleware**.
 
-- ~6.1kb size
-- ~2.5kb minified + gzipped
+The core of **mxn-connect** is "using" **middleware**. Middleware are added as a "stack" where incoming requests will execute each middleware one-by-one until a middleware does not call `next()` within it.
 
-This is a wrapper around [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer). Make sure to go check that out for options.
+The original author of **connect** is [TJ Holowaychuk](https://github.com/tj)
 
 ## Install
 
