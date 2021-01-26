@@ -4,8 +4,6 @@
 
 The core of **mxn-connect** is "using" **middleware**. Middleware are added as a "stack" where incoming requests will execute each middleware one-by-one until a middleware does not call `next()` within it.
 
-The original author of **connect** is [TJ Holowaychuk](https://github.com/tj)
-
 ## Install
 
 ```
@@ -57,6 +55,8 @@ server.on("error" , function(error) {
 ## License
 
 This module is released under the MIT license.
+
+The original author of **connect** is [TJ Holowaychuk](https://github.com/tj)
 
 ## Related
 
