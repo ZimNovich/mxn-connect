@@ -1,6 +1,6 @@
 # mxn-connect
 
-**mxn-connect** is an extensible HTTP server framework for [Node.js](http://nodejs.org) using "plugins" known as _middleware_.
+**mxn-connect** is a fork of **connect**, an extensible HTTP server framework for [Node.js](http://nodejs.org) using "plugins" known as **middleware**.
 
 - ~6.1kb size
 - ~2.5kb minified + gzipped
