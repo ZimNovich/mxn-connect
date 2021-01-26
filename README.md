@@ -55,7 +55,6 @@ server.on("error" , function(error) {
 ## License
 
 This module is released under the MIT license.
-
 The original author of **connect** is [TJ Holowaychuk](https://github.com/tj)
 
 ## Related
