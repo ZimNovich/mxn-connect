@@ -2,7 +2,7 @@
 
 [![npm@latest](https://badgen.net/npm/v/mxn-connect)](https://www.npmjs.com/package/mxn-connect)
 [![Install size](https://packagephobia.now.sh/badge?p=mxn-connect)](https://packagephobia.now.sh/result?p=mxn-connect)
-[![Downloads](https://img.shields.io/npm/dm/mxn-connect.svg)](https://npmjs.com/mxn-connect)
+[![Downloads](https://img.shields.io/npm/dm/mxn-connect.svg)](https://npmjs.com/package/mxn-connect)
 
 **mxn-connect** is a fork of [**connect**](https://github.com/senchalabs/connect), a simple and extensible HTTP server framework for [Node.js](http://nodejs.org) using "plugins" known as **middleware**.
 
