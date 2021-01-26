@@ -103,5 +103,6 @@ The original author of **connect** is [TJ Holowaychuk](https://github.com/tj)
 
 ## Related
 
+- [mxn-favicons](https://github.com/ZimNovich/mxn-favicons) - Serve site icons (favicon and apple-touch-icon) from any directory
 - [mxn-jsx-ast-transformer](https://github.com/ZimNovich/mxn-jsx-ast-transformer) - Transforms JSX AST into regular JS AST
 - [mxn-jsx-transpiler](https://github.com/ZimNovich/mxn-jsx-transpiler) - Transpiles JSX to regular JavaScript
